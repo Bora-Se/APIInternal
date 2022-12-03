@@ -67,15 +67,15 @@ public class C16_BaseUrlHerokuapp extends HerokuAppBaseUrl {
         specHerokuApp.pathParam("pp1","booking");
 
         JSONObject innerBody = new JSONObject();
-        JSONObject reqBody = new JSONObject();
+        JSONObject regBody = new JSONObject();
         innerBody.put("checkin", "2021-06-01");
         innerBody.put("checkout", "2021-06-10");
-        reqBody.put("firstname", "Ali");
-        reqBody.put("lastname", "Bak");
-        reqBody.put("totalprice", 500);
-        reqBody.put("depositpaid", false);
-        reqBody.put("bookingdates", innerBody);
-        reqBody.put("additionalneeds", "wi-fi");
+        regBody.put("firstname", "Ali");
+        regBody.put("lastname", "Bak");
+        regBody.put("totalprice", 500);
+        regBody.put("depositpaid", false);
+        regBody.put("bookingdates", innerBody);
+        regBody.put("additionalneeds", "wi-fi");
 
         // 2 - Expected Data hazirla
 
@@ -84,7 +84,7 @@ public class C16_BaseUrlHerokuapp extends HerokuAppBaseUrl {
                             spec(specHerokuApp).
                             contentType(ContentType.JSON).
                         when().
-                            body(reqBody.toString()).
+                            body(regBody.toString()).
                         post("/{pp1}");
         response.prettyPrint();
 
@@ -94,8 +94,6 @@ public class C16_BaseUrlHerokuapp extends HerokuAppBaseUrl {
                 assertThat().
                 statusCode(200).
                 body("booking.firstname",equalTo("Ali"));
-
-
 
     }
 
