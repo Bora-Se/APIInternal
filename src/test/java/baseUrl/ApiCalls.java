@@ -1,4 +1,4 @@
-package test;
+package baseUrl;
 
 public class ApiCalls {
     // Bu class BaseUrl deki class lar gibi ve spec methodu gibi kulanacagiz

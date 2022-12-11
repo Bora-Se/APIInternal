@@ -16,8 +16,7 @@ public class PostUserData {
         PostUserData.name = name;
     }
 
-    public static String getSalary() {
-        return salary;
+    public static String getSalary() {return salary;
     }
 
     public static void setSalary(String salary) {

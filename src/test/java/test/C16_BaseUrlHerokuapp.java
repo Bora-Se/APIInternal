@@ -1,11 +1,9 @@
 package test;
 
-import baseURL.HerokuAppBaseUrl;
-import baseURL.JsonPlaceHolderBaseURL;
+import baseUrl.HerokuAppBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.JSONObject;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;

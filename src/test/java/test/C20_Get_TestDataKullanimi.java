@@ -1,7 +1,6 @@
 package test;
 
-import baseURL.DummyBaseURL;
-import baseURL.JsonPlaceHolderBaseURL;
+import baseUrl.DummyBaseURL;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.json.JSONObject;

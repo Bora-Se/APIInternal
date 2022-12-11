@@ -1,7 +1,6 @@
 package test;
-import baseURL.DummyBaseURL;
+import baseUrl.DummyBaseURL;
 import io.restassured.response.Response;
-import org.junit.Assert;
 import org.junit.Test;
 import testData.TestDataDummy;
 import java.util.HashMap;

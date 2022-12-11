@@ -1,5 +1,5 @@
 package test;
-import baseURL.JsonPlaceHolderBaseURL;
+import baseUrl.JsonPlaceHolderBaseURL;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
