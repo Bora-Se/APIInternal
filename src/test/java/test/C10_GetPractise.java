@@ -22,5 +22,27 @@ public class C10_GetPractise {
      */
 
 
+    @Test
+    public void get01(){
+        // 1 - Request URL hazirla
+        String url = "http://dummy.restapiexample.com/api/v1/employees";
+
+        // 2 - Expected Data
+
+        // 3 - Response'u kaydet
+        Response response = given().when().get(url);
+        response.prettyPrint();
+
+        // 4 - Assertion
+        response.
+                then().
+                assertThat().
+                statusCode(200).
+                contentType(ContentType.JSON).
+                body("data.id", Matchers.hasSize(24),
+                        "data.employee_name" ,Matchers.hasItem("Ashton Cox"),
+                        "data.employee_age",Matchers.hasItems(61,40,30) );
+    }
+
 
 }
