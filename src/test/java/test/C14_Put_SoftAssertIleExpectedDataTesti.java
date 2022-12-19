@@ -82,11 +82,9 @@ Response Body
 
         // 3 - Response'u kaydet
 
-        Response response = given().
-                                contentType(ContentType.JSON).
-                            when().
-                                body(reqBody.toString()).
-                                put(url);
+        Response response = given().contentType(ContentType.JSON).
+                            when().body(reqBody.toString()).
+                            put(url);
 
         response.prettyPrint();
 
