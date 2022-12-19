@@ -11,14 +11,14 @@ import static org.hamcrest.Matchers.*;
 public class C10_GetPractise {
 
     /*
-            http://dummy.restapiexample.com/api/v1/employees url'ine bir GET request yolladigimizda
-            donen Response'in
-            status code'unun 200,
-            ve content type'inin Aplication.JSON,
-            ve response body'sindeki
-                employees sayisinin 24
-                ve employee'lerden birinin "Ashton Cox"
-                ve girilen yaslar icinde 61,40 ve 30 degerlerinin oldugunu test edin.
+    http://dummy.restapiexample.com/api/v1/employees url'ine bir GET request yolladigimizda
+    donen Response'in
+    status code'unun 200,
+    ve content type'inin Aplication.JSON,
+    ve response body'sindeki
+    employees sayisinin 24
+    ve employee'lerden birinin "Ashton Cox"
+    ve girilen yaslar icinde 61,40 ve 30 degerlerinin oldugunu test edin.
      */
 
 
@@ -35,8 +35,7 @@ public class C10_GetPractise {
 
         // 4 - Assertion
         response.
-                then().
-                assertThat().
+                then().assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
                 body("data.id", Matchers.hasSize(24),

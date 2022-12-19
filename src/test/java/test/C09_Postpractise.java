@@ -59,13 +59,14 @@ public class C09_Postpractise {
         // 2 - Expected Data hazirla
 
         // 3 - Response'u kaydet
-        Response response = given().contentType(ContentType.JSON).when().body(reqBody.toString()).post(url);
+        Response response = given().contentType(ContentType.JSON).
+                            when().body(reqBody.toString()).
+                            post(url);
         response.prettyPrint();
 
         // 4 - Assertion
         response.
-                then().
-                assertThat().
+                then().assertThat().
                 statusCode(200).
                 contentType(ContentType.JSON).
                 body("booking.firstname", equalTo("hasmet"),
@@ -97,13 +98,14 @@ public class C09_Postpractise {
         reqBody.put("additionalneeds" , "sahur");
 
         // 3 - Response'u kaydet
-        Response response = given().contentType(ContentType.JSON).when().body(reqBody.toString()).put(url);
+        Response response = given().contentType(ContentType.JSON).
+                            when().body(reqBody.toString()).
+                            put(url);
         response.prettyPrint();
 
         // 4 - Assertion
        /* response.
-                then().
-                assertThat().
+                then().assertThat().
                 contentType
                 body("booking.firstname", equalTo("hasmet"),
                         "booking.lastname",equalTo("celik"),
