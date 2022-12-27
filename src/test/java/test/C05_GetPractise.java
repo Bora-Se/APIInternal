@@ -15,12 +15,15 @@ public class C05_GetPractise {
          */
     @Test
     public void get01(){
+
         // 1- Request için URL ve Body hazırla
         String url = "https://jsonplaceholder.typicode.com/posts/44";
+
         // 2- Expected Datayi hazırla
         // 3- Reponse'u kaydet
         Response response = given().when().get(url);
         response.prettyPrint();
+
         // 4- Assertion
         response.
                 then().

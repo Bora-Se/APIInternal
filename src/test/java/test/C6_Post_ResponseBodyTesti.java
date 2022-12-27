@@ -40,24 +40,17 @@ public class C6_Post_ResponseBodyTesti {
         reqBody.put("body","API ogrenmek ne guzel");
         reqBody.put("userId",10);
 
-
-
         // 2- Soruda verilmisse, Expected Datayi hazirla -- henuz karsilastirma yok
         //3- Response'u kaydet
 
-        Response response = given().
-                                contentType(ContentType.JSON).
-                            when().
-                                body(reqBody.toString()).
+        Response response = given().contentType(ContentType.JSON).
+                            when().body(reqBody.toString()).
                                 post(url);  // Response de given().when() olmak zorunda
         //response.prettyPrint();
 
-
         // 4- Assertion olusturalim
 
-        response.
-                then().
-                assertThat().
+        response.then().assertThat().
                 statusCode(201).
                 contentType(ContentType.JSON).
                 body("title", Matchers.equalTo("API")).
