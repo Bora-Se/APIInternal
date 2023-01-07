@@ -61,10 +61,8 @@ public class C14_PutPractise {
         reqBody.put("data",data);
         reqBody.put("status","success");
         // 3 - Response'u kaydet
-        Response response = given().
-                contentType(ContentType.JSON).
-                when().
-                body(reqBody.toString()).
+        Response response = given().contentType(ContentType.JSON).
+                when().body(reqBody.toString()).
                 put(url);
         response.prettyPrint();
         // 2 - Expected Data hazirla

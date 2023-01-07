@@ -45,7 +45,7 @@ public class C6_Post_ResponseBodyTesti {
 
         Response response = given().contentType(ContentType.JSON).
                             when().body(reqBody.toString()).
-                                post(url);  // Response de given().when() olmak zorunda
+                                post(url);  // Response de; given().when() ve Http metodu olmak zorunda
         //response.prettyPrint();
 
         // 4- Assertion olusturalim

@@ -25,11 +25,9 @@ public class C05_GetPractise {
         response.prettyPrint();
 
         // 4- Assertion
-        response.
-                then().
-                assertThat().
-                statusCode(200).
-                contentType("application/json").
+        response.then().assertThat(). // Bu uclu sabit
+                // Dikkat, asagidakiler zaten Requestte belirtilenlerin dogrulanmasi
+                statusCode(200).contentType("application/json").
                 body("userId", Matchers.equalTo(5)).
                 body("title",Matchers.equalTo("optio dolor molestias sit"));
     }
