@@ -57,21 +57,16 @@ public class C09_Post_JsonPathIleBodyTesti {
         // 2- Soruda verilmisse, Expected Datayi hazirla -- henuz karsilastirma yok
         //3- Response'u kaydet
 
-        Response response = given().
-                                contentType(ContentType.JSON).
-                            when().
-                                    body(reqBody.toString()).
+        Response response = given().contentType(ContentType.JSON).
+                            when().body(reqBody.toString()).
                                     post(url);
-        response.prettyPrint();// Response de given().when() olmak zorunda
+        response.prettyPrint();// Response de given().when() ve http metodu olmak zorunda
 
 
         // 4- Assertion olusturalim
 
-        response.
-                then().
-                assertThat().
-                statusCode(200).
-                contentType(ContentType.JSON).
+        response.then().assertThat().
+                statusCode(200).contentType(ContentType.JSON).
                 body("booking.firstname", equalTo("Ali"),
                         "booking.lastname",equalTo("Bak"),
                         "booking.totalprice",equalTo(500),
